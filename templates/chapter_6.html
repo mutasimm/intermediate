@@ -4,16 +4,13 @@
 </<!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
-    body {
-        max-width: 960px;
-        margin: 0 auto;
-        line-height: 150%;
+      body {
+        line-height: 200%;
       }
-  </style>
+    </style>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="utf-8">
     <title></title>
   </head>
   <body>
@@ -48,15 +45,15 @@
 
     <p><b>উপপাদ্য(6.6):</b> ধরা যাক, \( n = p_1^{a_1} p_2^{a_2} p_3^{a_3} \dots p_k^{a_k}\), যেখানে \(p_1, p_2, \dots ,p_k\) ভিন্ন ভিন্ন মৌলিক সংখ্যা। তাহলে, \(n\) এর উৎপাদকগুলোর যোগফল হবে \( \cfrac{p_1^{a_1 + 1} - 1}{p_1 - 1} \ \cfrac{p_2^{a_2 + 1} - 1}{p_2 - 1}\ \dots \ \cfrac{p_k^{a_k + 1} -1}{p_k-1}. \) </p>
 
-    <p><b>প্রমাণের হিন্টঃ</b> n এর সবগুলো উৎপাদকের যোগফল হবে এরকমঃ \((1 + p_1 + p_1^2+ \dots +p_1^{a_1} \ (1 + p_2 + p_2^2+ \dots + p_2^{a_2}) \dots (1 + p_k + p_k^2+ \dots +p_k^{a_k}) \) এরপর গুণোত্তর ধারার যোগফল চিন্তা কর। \( \square \)</p>
+    <p><b>প্রমাণের হিন্টঃ</b> n এর সবগুলো উৎপাদকের যোগফল হবে এরকমঃ \((1 + p_1 + p_1^2+ \dots +p_1^{a_1}) \ (1 + p_2 + p_2^2+ \dots + p_2^{a_2}) \dots (1 + p_k + p_k^2+ \dots +p_k^{a_k}) \) এরপর গুণোত্তর ধারার যোগফল চিন্তা কর। \( \square \)</p>
 
     <p>এখন আমরা দেখবো \(p\) একটি মৌলিক সংখ্যা হলে \(n!\) কে \(p\) এর সর্বোচ্চ কত পাওয়ার দিয়ে ভাগ করা যায়। \(n!\) হল \(1\) হতে \(n\) পর্যন্ত পূর্ণসংখ্যা গুলোর গুণফল। অর্থাৎ \(n! = 1 \times 2 \times 3 \times \dots \times (n-1) \times n\). যেমন \( 5! = 1 \times 2 \times 3 \times 4 \times 5 = 120\). </p>
 
     <p><b>সংজ্ঞাঃ</b> \(v_k (n)\) দ্বারা বোঝানো হবে \(k\) এর সর্বোচ্চ যে ঘাত দিয়ে \(n\) কে নিঃশেষে ভাগ করা যায়। যেমনঃ \(v_2 (24) = 3,\ v_3 (27) = 3,\ v_7 (98) = 2,\ v_6 (0) = \infty\) ইত্যাদি। </p>
 
-    <p><b>উপপাদ্য(6.7):</b> \(p\) একটি মৌলিক সংখ্যা হলে, \(v_p = \lfloor \frac{n}{p} \rfloor + \lfloor \frac{n}{p^2} \rfloor + \lfloor \frac{n}{p^3} \rfloor + \dots \). </p>
+    <p><b>উপপাদ্য(6.7):</b> \(p\) একটি মৌলিক সংখ্যা হলে, \(v_p(n!) = \lfloor \frac{n}{p} \rfloor + \lfloor \frac{n}{p^2} \rfloor + \lfloor \frac{n}{p^3} \rfloor + \dots \). </p>
 
-    <p><b>প্রমাণঃ</b> \(1\) হতে \(n\) পর্যন্ত \(p\) এর উৎপাদক আছে \( \lfloor \frac{n}{p} \rfloor\)  টি। আবার \(p^2\) এর উৎপাদক আছে \(\lfloor \frac{n}{p^2} \rfloor\) টি। এইভাবে। যেকোন \( k \in \mathbb{N}\) এর জন্য \( p^k \) দ্বারা বিভাজ্য সংখ্যা আছে \( \lfloor \frac{n}{p^k} \rfloor\) আছে।  লক্ষ্য করে দেখ, \( \lfloor \frac{n}{p} \rfloor,\ \lfloor \frac{n}{p^2} \rfloor,\ \lfloor \frac{n}{p^3} \rfloor\) পদগুলো যোগ করার সময় যেকোন একটা সংখ্যা ততবারই গোনা হচ্ছে \(p\) এর সর্বোচ্চ যত ঘাত দিয়ে সংখ্যাটিকে নিঃশেষে ভাগ করা যায়। \( \square \) </p>
+    <p><b>প্রমাণঃ</b> \(1\) হতে \(n\) পর্যন্ত \(p\) এর উৎপাদক আছে \( \lfloor \frac{n}{p} \rfloor\)  টি। আবার \(p^2\) এর উৎপাদক আছে \(\lfloor \frac{n}{p^2} \rfloor\) টি। এইভাবে। যেকোন \( k \in \mathbb{N}\) এর জন্য \( p^k \) দ্বারা বিভাজ্য সংখ্যা আছে \( \lfloor \frac{n}{p^k} \rfloor\) আছে। এখন, \(p\) দ্বারা বিভাজ্য \(\lfloor \frac{n}{p} \rfloor\) টি সংখ্যা গুণফলে \(\lfloor \frac{n}{p} \rfloor\) টি \(p\) যোগ করে। এরপর, \(p^2\) দ্বারা বিভাজ্য \(\lfloor \frac{n}{p^2} \rfloor\) টি সংখ্যা গুণফলে অতিরিক্ত \(\lfloor \frac{n}{p^2} \rfloor\) টি \(p\) যোগ করে। এভাবে \(p^k\) দ্বারা বিভাজ্য \(\\lfloor \frac{n}{p^k} \rfloor\) টি সংখ্যা গুণফলে অতিরিক্ত \(\lfloor \frac{n}{p^k} \rfloor\) টি \(p\) যোগ করে। লক্ষ্য করে দেখ, \( \lfloor \frac{n}{p} \rfloor,\ \lfloor \frac{n}{p^2} \rfloor,\ \lfloor \frac{n}{p^3} \rfloor\) পদগুলো যোগ করার সময় যেকোন একটা সংখ্যা ততবারই গোনা হচ্ছে \(p\) এর সর্বোচ্চ যত ঘাত দিয়ে সংখ্যাটিকে নিঃশেষে ভাগ করা যায়। আরো লক্ষ্য কর, \(p\) এর সর্বোচ্চ যে ঘাত দিয়ে \(n\) বা এর চেয়ে ছোট কোন সংখ্যাকে ভাগ করা যায়, \(k\) এর তার চেয়ে বড় যেকোন মানের জন্য \(\lfloor \frac{n}{p^k} \rfloor\) মান \(0\) হবে। \( \square \)</p>
 
   </body>
 </html>
