@@ -86,7 +86,7 @@ def view_chapter_c1():
 
 @app.route('/view_chapter_appendix')
 def view_chapter_appendix():
-    return render_template("appedix.html")
+    return render_template("chapter_appendix.html")
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
